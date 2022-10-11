@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!--Калькулятор предварительной цены заказа и форма оформления заказа.-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>
+            Title
+        </title>
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="css/work.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="test.js"></script>
+       
+    </head>
+    <body>
+        <div class="bg">
+        </div>
+        <header>
+            <a href="test.html" title="Return to the homepage" id="logo">
+                <img src="ogp_3.png"  />
+            </a>
+            <hgroup>
+                <h1>
+                    8(812) 9038034
+                </h1>
+                <h1>
+                    Раб. 9
+                    <sup>00</sup>
+                    - 24
+                    <sup>00</sup>
+                </h1>
+                <h1>
+                    Без выходных
+                </h1>
+            </hgroup>
+        </header>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <div class="topnav" id="myTopnav">
+  <a   href="index.html">Главная</a>
+            <a href="price.html">Цены</a>
+			<a href="prof.html">Профили</a>
+			<a href="repair.html">Ремонт окон</a>
+			<a  href="auth.php">Авторизация</a>
+			<a class ="active" target = "_self"  href="calc.html">Калькулятор</a>
+			<a  href="contact.html">Контакты</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+        <script language="JavaScript">
+
+function sums()
+{
+var he = document.getElementById("r16").value;
+var wi = document.getElementById("r17").value;
+var sum=parseInt(he)*parseInt(wi)*100;
+ console.log(sum);
+ for(i=1;i<=17;i++)
+ { 
+  var elem=document.getElementById("r"+i);
+  if(elem.checked)sum=sum+parseInt(elem.value);
+ }
+ document.formText.sumOut.value=sum;
+}
+</script>
+<script>
+
+function ajax_post(){
+    var hr = new XMLHttpRequest();
+    var url = "parsef.php";
+    var fn = document.getElementById("adre").value;
+    var ln = document.getElementById("fio").value;
+     var pr = document.getElementById("pric").value;
+     var tm = document.getElementById("telmail").value;
+    var vars = "adre="+fn+"&fio="+ln+"&price="+pr+"&telm="+tm;
+    hr.open("POST", url, true);
+    hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    hr.onreadystatechange = function() {
+	    if(hr.readyState == 4 && hr.status == 200) {
+		    var return_data = hr.responseText;
+			document.getElementById("result").innerHTML = return_data;
+	    }
+    }
+    hr.send(vars); 
+    document.getElementById("result").innerHTML = "processing...";
+}
+</script>
+<div class="calccont">
+<form name="formText">
+<label>Калькулятор цены заказа</label><br>
+<div class="dop">
+ <div class="cc-selector">
+        <input id="r11" type="radio" name="credit-card" value="1000" />
+        <label class="drinkcard-cc r11" for="r11"></label>
+        <input id="r12" type="radio" name="credit-card" value="2000" />
+        <label class="drinkcard-cc r12"for="r12"></label>
+		<input id="r13" type="radio" name="credit-card" value="3000" />
+        <label class="drinkcard-cc r13"for="r13"></label><br>
+		<input id="r14" type="radio" name="credit-card" value="3150" />
+        <label class="drinkcard-cc r14"for="r14"></label>
+		<input id="r15" type="radio" name="credit-card" value="3250" />
+        <label class="drinkcard-cc r15"for="r15"></label>
+    </div>
+<br>
+</div>
+<div class="dop">
+<label>Высота(Метры)</label><input type ="number" id="r16" max="20" min="1"><br>
+<label>Ширина(Метры)</label><input type ="number" id="r17" max="25" min="2"><br>
+</div>
+<br>
+<div class="dop">
+<label>Профили</label><br>
+<input type="radio" name="aa" id="r1" value="2000">Эконом
+<input type="radio" name="aa" id="r2" value="3500">Премиум <br>
+</div>
+<br>
+<div class="dop">
+<label>Стеклопакет</label><br>
+<input type="radio" name="bb" id="r3" value="1000">Однокамерный
+<input type="radio" name="bb" id="r4" value="2250">Двукамерный
+</div>
+<BR>
+<div class ="dop">
+<label>Дополнительные услуги</label><br>
+<input type="checkbox" id="r5" value="800">Москитная сетка
+<input type="checkbox" id="r6" value="700">Водоотлив<BR>
+<input type="checkbox" id="r7" value="500">Нащельник
+<input type="checkbox" id="r8" value="1000">Подоконник<BR>
+
+<input type="checkbox" id="r9" value="500">Откосы
+<input type="checkbox" id="r10" value="800">Монтажные работы<BR><BR>
+</div>
+<input type="button" onclick="sums()" value="Подсчитать" >
+<br>Сумма:<br>
+<input type="text" name="sumOut" id="pric" disabled="false" value="" style=""><br>
+<br>Оформить заказ<br>
+<br>Имя:<br>
+<input type="text" name="fioz" id="fio" value="">
+<br>Адрес:<br>
+<input type="text" name="adr" id="adre" value="">
+<br>Контактные данные:<br>
+<input type="text" name="telma" id="telmail"  value=""><br><br>
+<input type="button" onclick="ajax_post()" value="Записаться">
+<div id="result"></div>
+    </form>
+	</div>
+</body>
+</html>

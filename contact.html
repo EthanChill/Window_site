@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <title>Title</title>
+   <link rel="stylesheet" type="text/css" href="css/contact.css">
+   <meta name="viewport" content="width=device-width, initial-scale=0.7">
+
+     <script src="test.js"></script>
+</head>
+<body>
+ 
+<div class="bg"></div>
+    <header>
+	<a href="index.html" title="Return to the homepage" id="logo">
+  <img src="ogp_3.png"  />
+</a>
+        <hgroup>
+           <h1>8(812) 9038034</h1>
+		   <h1>Раб. 9<sup>00</sup> - 24<sup>00</sup></h1>
+		   <h1>Без выходных</h1>
+        </hgroup>
+    </header>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <div class="topnav" id="myTopnav">
+ <a    href="index.html">Главная</a>
+            <a href="price.html">Цены</a>
+			<a href="prof.html">Профили</a>
+			<a href="repair.html">Ремонт окон</a>
+			<a  href="auth.php">Авторизация</a>
+			<a  href="calc.html">Калькулятор</a>
+			<a class ="active" target = "_self" href="contact.html">Контакты</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+	<section>
+	<h3>
+	Контакты
+	</h3>
+	<br>
+	<h2>
+8 (812) 903-80-34
+</h2>
+<br>
+zakaz@potolki.ru
+<br>
+Подписывайтесь:
+<br>
+Режим работы: круглосуточно без выходных
+<br>
+Реквизиты:
+<br>
+Индивидуальный предприниматель
+<br>
+<br>
+Юр. адрес: г. Санкт-Петербург, ул. Демьяна Бедного, д. 31
+  <div id="map" style="width:550px;height:400px; margin: 0 auto;"></div>
+<script>
+function myMap() {
+    var myCenter = new google.maps.LatLng(60.048879, 30.394253);
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {center: myCenter, zoom: 16};
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var marker = new google.maps.Marker({position:myCenter});
+  marker.setMap(map);
+};
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiHz1iCYKBLVsWZPDh14dQy_wkj9OlAO4&callback=myMap"></script>
+	</section>
+</body>
+</html>
