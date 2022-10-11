@@ -1,0 +1,129 @@
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+body{
+	
+	
+	 background-image: url("IMG-20180702-WA0005.jpg");
+      background-repeat: no-repeat;
+	background-size:cover;
+   background-position:center;
+
+height:100%;
+
+}
+#logo{
+	float:left;
+	
+}
+html{
+	height: 100%;
+}
+.per {
+	width: 35%;
+	height:20%;
+    background-color: white;
+	color:red;
+}
+
+header, footer {
+	
+    padding: 1em;
+    color: white;
+    background-color: #97C9C9;
+    clear: left;
+    text-align: center;
+
+}
+
+h1{
+text-align: right;
+margin: 0;
+font-size :18px;
+color:#131FF1;
+	
+}
+
+header{
+position:left-side;	
+ left: 0;
+  bottom: 0;
+  background-color:#97C9C9;
+ 
+}
+
+aside{
+	    background: #f0f0f0;
+    padding: 10px;
+    width: 200px;
+	height:200px;
+    float: right;
+	
+	
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+
+    border-right:1px solid #bbb;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+  padding: 14px 103px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #0868B4;
+}
+nav{
+	width:100%;
+}
+#price {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+	position:center;
+}
+table { margin: auto; } 
+
+#price td, #price th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#price tr{
+	background-color: #f2f2f2;
+	}
+
+#price tr:hover {background-color: #ddd;}
+
+#price th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #0868B4;
+    color: white;
+}
+</style>

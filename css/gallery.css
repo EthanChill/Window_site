@@ -1,0 +1,129 @@
+<style>
+
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+body{
+	
+	
+	 background-image: url("IMG-20180702-WA0003.jpg");
+    background-repeat: no-repeat;
+	background-size:cover;
+   
+    
+
+
+}
+html, body {
+    margin: 0;
+   
+}
+
+div.gallery {
+    margin: auto;
+    border: 1px solid #ccc;
+    float: left;
+    max-width: 100%;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 257px;
+    height: auto;
+}
+
+div.desc {
+    padding: 14px;
+    text-align: center;
+	max-width:230px;
+	height:45px;
+}
+
+#logo{
+	float:left;
+}
+header, footer {
+	
+    padding: 1em;
+    color: white;
+    background-color: #97C9C9;
+    clear: left;
+    text-align: center;
+
+}
+h2{
+text-align: right;
+margin: 0;
+font-size :18px;
+color:#131FF1;
+}
+
+
+ header{
+position:left-side;	
+ left: 0;
+  bottom: 0;
+  background-color:#97C9C9;
+ 
+}
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
+
+
+
+article {
+	
+   
+height:300px;
+    <!--margin-right: 170px;-->
+    border-right: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+
+    border-right:1px solid #bbb;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 104px;
+	
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #0868B4;
+}
+
+</style>

@@ -1,0 +1,100 @@
+<style>
+
+
+body{
+	
+}
+
+header, footer {
+	
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+h2{
+text-align: right;
+margin: 0;
+font-size :12px;
+	
+}
+footer{
+position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 1880px;
+  height: 80px;
+}
+aside{
+	    background: #f0f0f0;
+    padding: 10px;
+    width: 200px;
+	height:200px;
+    float: right;
+	
+	
+}
+ul {
+	border-radius: 0px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: gray;
+}
+
+li {
+    float: left;
+}
+
+li a {
+	border-radius: 5px;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+	margin-left: 160px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111111;
+}
+nav {
+	border-radius: 10px;
+    float: top;
+  width:180px;
+  height:50px;
+    margin: 10;
+    padding: 1em;
+}
+section{
+	
+  float: left;
+  
+width:1500px;
+}
+nav ul {
+	width:1880px;
+	 height:50px;
+    list-style-type: none;
+    padding: 0;
+}
+   
+nav ul a {
+    text-decoration: none;....
+}
+
+
+article {
+	
+   
+height:100px;
+    <!--margin-right: 170px;-->
+    border-right: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+
+</style>
