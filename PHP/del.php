@@ -8,7 +8,7 @@ $connect = mysqli_connect($host,$user,$password,$db_name);
 if(!$connect){
 	die('error'.mysqli.error());
 }*/
-require 'connect.php';
+require_once 'connect.php';
 if(isset($_POST['id'])){
 	
 	$id = $_POST['id'];
