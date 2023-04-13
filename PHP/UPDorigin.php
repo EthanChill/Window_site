@@ -2,7 +2,7 @@
 require_once('connect.php');
 session_start();
 if(!isset($_SESSION['User'])){
-    header("location:auth.php");
+  header("location:auth.php");
     //Удаление заказов, а также их обновление через модальную форму.
 }
 ?>
@@ -16,19 +16,19 @@ if(!isset($_SESSION['User'])){
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <?php echo '<a href="logout.php?logout">Выйти</a>';?>
+<?php echo '<a href="logout.php?logout">Выйти</a>';?>
 <div class ="container">
 <table class ="table">
-<thead>
-<tr>
-<th>Address</th>
-<th>Telephon/mail</th>
-<th>FIO</th>
-<th>PRICE</th>
-<th>ACTION</th>
-<th>ACTION2</th>
-</tr>
-</thead>
+ <thead>
+  <tr>
+   <th>Address</th>
+   <th>Telephon/mail</th>
+   <th>FIO</th>
+   <th>PRICE</th>
+   <th>ACTION</th>
+   <th>ACTION2</th>
+  </tr>
+ </thead>
 <tbody>
 <?php
 $table = mysqli_query($connect,'Select * from ordertab');
@@ -48,9 +48,8 @@ while($row=mysqli_fetch_array($table)){?>
 </table>
 </div>
 <div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-    <!-- Modal content-->
+  <div class="modal-dialog">
+   <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
