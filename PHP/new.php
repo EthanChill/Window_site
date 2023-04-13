@@ -1,6 +1,6 @@
 <?php
 //Сортировка в убывающем порядке заказов.
-include('connect.php');
+require_once('connect.php');
 $query = "SELECT * FROM ordertab ORDER BY odate DESC";
 $statement = $connect->prepare($query);
 if($statement->execute())
