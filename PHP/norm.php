@@ -1,11 +1,11 @@
 <!--Таблица заказов-->
 <table>
 <tr>
-<th>id	</th>
-<th>	Address</th>
+<th>id</th>
+<th>Address</th>
 <th>Telephon/mail	</th>
-<th>	FIO</th>
-<th>PRICE	</th>
+<th>FIO</th>
+<th>PRICE</th>
 </tr>
 <tbody id ="data">
 </tbody>
@@ -17,8 +17,7 @@ var url = "data.php";
 var asynchronous = true;
 ajax.open(method,url,asynchronous);
 ajax.send();
-ajax.onreadystatechange = function(){
-	
+ajax.onreadystatechange = function(){
 	if(this.readyState == 4 && this.status ==200)
 	{
 		var data = JSON.parse(this.responseText);
@@ -36,8 +35,7 @@ ajax.onreadystatechange = function(){
 			html += "<td>"+telma+"</td>";
 			html += "<td>"+fiot+"</td>";
 			html += "<td>"+pricez+"</td>";
-			html += "</tr>";
-			
+			html += "</tr>";
 		}
 		document.getElementById("data").innerHTML = html;
 	}
