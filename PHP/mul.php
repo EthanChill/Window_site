@@ -3,7 +3,7 @@
 //multiple_update.php
 session_start();
 // Получение фио из бд по текущему логину и присваивание статуса выполнения заказа этому человеку.
-
+//
 if(isset($_SESSION['User'])){
     require_once('connect.php');
 $result = mysqli_query($connect,"Select fio  from logtab  where mail = '".$_SESSION['User']."'");
