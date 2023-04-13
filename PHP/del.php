@@ -4,7 +4,8 @@
 $user="id9520144_root";
 $password = "root";
 $db_name="id9520144";
-$connect = mysqli_connect($host,$user,$password,$db_name);/
+$connect = mysqli_connect($host,$user,$password,$db_name);*/
+include 'connect.php';
 if(!$connect){
 	die('error'.mysqli.error());
 }
