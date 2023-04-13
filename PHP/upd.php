@@ -1,5 +1,5 @@
 <?php
-include connect.php;
+require_once connect.php;
 // Модальное окно изменения данных определённого заказа. 
 ?>
 <html>
