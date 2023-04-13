@@ -4,11 +4,11 @@
 $user="id9520144_root";
 $password = "root";
 $db_name="id9520144";
-$connect = mysqli_connect($host,$user,$password,$db_name);*/
-include 'connect.php';
+$connect = mysqli_connect($host,$user,$password,$db_name);
 if(!$connect){
 	die('error'.mysqli.error());
-}
+}*/
+include 'connect.php';
 if(isset($_POST['id'])){
 	
 	$id = $_POST['id'];
