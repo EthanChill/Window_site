@@ -1,8 +1,8 @@
 <?php
 session_start();
 require_once('connect.php');
-$admin='yunchikvlad@mail.ru';
-$adminpw='root';
+//$admin='yunchikvlad@mail.ru';
+//$adminpw='root';
 // Осуществление авторизации.Проверка на заполнение полей.
 if(isset($_POST['login']))
 {
